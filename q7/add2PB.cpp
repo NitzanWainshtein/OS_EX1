@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <cctype>
-#include "add2PB.hpp"
+
 
 using namespace std;
 
@@ -16,6 +16,7 @@ bool isValidName(const char* part) {
     }
     return true;
 }
+
 // Function to check if the phone number is valid
 bool isValidPhone(const char* phone) {
     for (int i = 0; phone[i] != '\0'; ++i) {
@@ -104,6 +105,6 @@ int main(int argc, char *argv[]) {
     // Write to the file
     write(fd, buffer, index);
     close(fd);
-
+    cout << "Added successfully to phonebook!" <<endl;
     return 0;
 }
